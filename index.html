@@ -115,13 +115,13 @@
       </tr>
       <tr>
         <td>App activity and analytics</td>
-        <td>Onboarding steps, sign-in completion, purchase events, app launches, and feature usage events</td>
+        <td>Onboarding steps, sign-in completion, purchase events, app launches, and feature usage events (via Mixpanel and Meta)</td>
         <td>To understand whether the app is working, improve the product, and measure advertising performance.</td>
       </tr>
       <tr>
-        <td>Advertising identifiers, only if you opt in</td>
-        <td>Android Advertising ID and Meta app-event identifiers</td>
-        <td>To measure whether Meta ads led to app installs, registration, and purchases. This is off by default and only enabled after your consent.</td>
+        <td>Advertising identifier</td>
+        <td>Android Advertising ID (GAID) and Meta app-event identifiers</td>
+        <td>To measure whether Meta ads led to app installs, registration, and purchases, and to attribute conversions. You can limit or reset this in your device's Google &rarr; Ads settings.</td>
       </tr>
       <tr>
         <td>Diagnostics and device data</td>
@@ -143,7 +143,7 @@
     <li>Process and verify subscriptions.</li>
     <li>Send or prepare review-request messages when you choose to do so.</li>
     <li>Monitor app reliability and fix technical issues.</li>
-    <li>Measure advertising performance only where permitted and, for advertising identifiers, only after opt-in consent.</li>
+    <li>Measure advertising and campaign performance, including via a device advertising identifier (GAID).</li>
   </ul>
   <p>We do not sell your personal data.</p>
 
@@ -168,8 +168,9 @@
       <tr><td>Firebase / Google</td><td>Anonymous authentication, app configuration, and Google Places data.</td></tr>
       <tr><td>Supabase</td><td>Database, authentication bridge, backend functions, and row-level account security.</td></tr>
       <tr><td>Razorpay</td><td>Payment checkout, subscription billing, and payment verification.</td></tr>
-      <tr><td>Meta (Facebook)</td><td>App events and ad measurement. Advertising ID collection is off unless you opt in.</td></tr>
+      <tr><td>Meta (Facebook)</td><td>App events, ad measurement, and attribution using a device advertising identifier (GAID).</td></tr>
       <tr><td>Sentry</td><td>Crash reporting, error diagnostics, and release debugging.</td></tr>
+      <tr><td>Mixpanel</td><td>First-party product analytics — onboarding funnel and feature-usage events to improve the app.</td></tr>
       <tr><td>Apify</td><td>Retrieving public Google review text and review recency where enabled.</td></tr>
       <tr><td>Expo</td><td>Push notification delivery and app build/runtime services.</td></tr>
     </tbody>
@@ -179,12 +180,13 @@
     other countries where their infrastructure operates.
   </p>
 
-  <h2>5. Advertising and Consent</h2>
+  <h2>5. Advertising and Measurement</h2>
   <p>
-    Zyada uses Meta app events to understand app installs, registration, and purchase performance.
-    Advertising ID collection is <strong>off by default</strong>. If you choose "Allow" in the app's ad
-    measurement prompt, Zyada may enable advertising ID collection so Meta can attribute app activity
-    to ads. You can turn this off at any time in <strong>Settings &rarr; Ad measurement</strong>.
+    Zyada uses Meta app events and a device <strong>advertising identifier (Android Advertising ID / GAID)</strong>
+    to measure app installs, registrations, and purchases and to attribute them to our advertising. You can limit
+    ad tracking, reset your advertising ID, or opt out of ads personalization at any time from your device's
+    <strong>Settings &rarr; Google &rarr; Ads</strong>. We also use Mixpanel for first-party product analytics
+    (how the app is used to improve it); Mixpanel does not use the advertising identifier.
   </p>
 
   <h2>6. Data Retention and Deletion</h2>
